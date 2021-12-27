@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='showing.css')}}">
+    <title>Document</title>
+   
+
+
+</head>
+ 
+<body> 
+    
+
+    <div class="home"onclick=window.location.href="/"><p>Home Page</p>  </div>
+    <div class="container"  > 
+     {%for item in liste%}
+     <div class="footer" id="{{item[0]}}" onclick="window.location.href='../static/{{item[2]}}/{{item[0]}}'"> 
+        <div class="card-image"  >  <img src="../static/{{item[2]}}/{{item[0]}}" >   </div>
+        <div class="card-text">
+        <span class="line">---------------------------------------</span>
+        <p>{{item[1]}}</p>
+    {%if item[2]=="unknown"%}
+     <div class="name" ><center> {{item[2]}}</center></div>
+      </div>
+      {%else%}
+      <div class="name" ><center> {{item[3]}}</center></div>
+    </div>
+     {%endif%}
+   
+    </div>
+    
+ 
+  
+    {% endfor %}
+    
+</div>
+ 
+</body>
+</html>

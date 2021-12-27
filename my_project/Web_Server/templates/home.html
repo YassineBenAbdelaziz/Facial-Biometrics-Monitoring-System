@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='home.css')}}">
+   <title>Document</title>
+ </head>
+ <body>
+   <div class="logout" onclick=window.location.href="/logout"><p>Logout</p></div>
+   <div class="card" onclick=window.location.href="/forme">
+    <div class="card-image"></div>
+    <div class="card-text">
+    <span class="line">---------------</span>
+    <h2>Visitors viewer</h2>  
+ <p> View detected visitors with the filters of your choice.<br>Currecntly we have detected:</p>
+  </div>
+  <div class="card-stats">
+    <div class="stat">
+      <div class="value">{{liste_information[2]}}</div>
+      <div class="type">Visiteurs</div>
+    </div>
+    <div class="stat">
+      <div class="value">{{liste_information[1]}}</div>
+      <div class="type">Known</div>
+    </div>
+    <div class="stat">
+      <div class="value">{{liste_information[0]}}</div>
+      <div class="type">Unknown</div>
+    </div>
+  </div>
+</div>
+<div class="card"  onclick=window.location.href="/addface">
+  <div id="here"></div>
+  <div class="card-text">
+  <span class="line">---------------</span>
+  <h2>Add to data base</h2>  
+<p> Add persons in the data base to recognize.<br>currecntly we have:</p>
+</div>
+<div class="card-stats" >
+  
+  <div class="stat" id="people">
+    <div class="value"><p>{{knowns}} person(s) are identified by our data base</p></div>
+ 
+  </div> 
+   
+</div>
+</div>
+ </body>
+ </html>

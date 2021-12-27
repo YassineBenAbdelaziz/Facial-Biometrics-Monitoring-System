@@ -1,0 +1,110 @@
+body{
+
+    height: 100vh;
+    width: 100vw;
+    display:flex; 
+    align-items:center;
+    justify-content:center;
+    margin:0;
+    overflow-x: hidden;
+    background-image: url("images/good.png");
+}
+.container{
+  position: relative;
+  top: 120px;
+  height: 100vh;
+  width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    grid-auto-rows:400px;
+    height: 100%;
+    width: 50%;
+   grid-gap: 4px;
+ 
+   padding: 30px;
+  
+ 
+  }
+      
+         
+          .container div{ 
+              padding:10px; 
+              border: 1px solid black;
+              margin:auto;
+              background-color: black;
+              border-radius: 18px;
+          }
+          .card-image {
+      grid-area: image;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      background-size: contain;
+      height: 150px;
+      width: 150px;
+      margin:  auto;
+ 
+
+     
+    }
+    .card-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+ 
+    } 
+    .card-text {
+      grid-area: text;
+      margin: 25px;
+      height: 170px;
+      width: 170px;
+    }
+    .card-text .line {
+      color: rgb(255, 7, 110);
+      font-size:13px;
+    }
+    .card-text p {
+      color: grey;
+      font-size:15px;
+      font-weight: 300;
+    }
+    .card-text h2 {
+      margin-top:0px;
+      font-size:28px;
+    }
+    .container .footer:hover {
+      transform: scale(1.15);
+      box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.6);
+    }
+    .container .footer {
+
+      transition: 0.5s ease;
+      cursor: pointer;
+    
+    }
+    .container .name{
+      background-color: rgb(97, 85, 85);
+      position: relative;
+      top: 50px;
+      left: 0px;
+      width: 150px;
+      height: 30px;
+    }
+.home {
+     position: absolute;
+     top:50px;
+     background-color: rgb(135, 178, 241);
+     width: 150px;
+     height: 40px;
+     border-radius: 20px;
+     
+   }
+   .home p{
+    margin: 9px;
+    text-align: center;
+     
+
+   }
+   .home:hover{
+     cursor:pointer;
+   }

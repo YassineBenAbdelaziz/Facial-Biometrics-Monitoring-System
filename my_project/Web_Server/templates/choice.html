@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='forme.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"> 
+    <div class="title">Visitors parameters</div>
+    <br>
+    
+    <form action={{url_for('affichage')}} method="POST">
+     <div class="parameters-details">  
+         <div class="calendrier"> 
+     <label for="date">Date :</label>
+     <input type="date" name="date" id="date"> <br>     
+    </div>
+    <br>
+    <div class="radio">
+     <label for="known">Known:</label>
+     <input type="radio" id="known" name="person_type" value="known"> 
+     <label for="unknown">Unknown:</label>
+     <input type="radio" id="unknown: " name="person_type" value="unknown"> 
+     <label for="all: ">All</label>
+     <input type="radio" id="all" name="person_type" value="all" checked><br> <br>
+     <div class="submit">
+     <input type="submit" value="Voir les visiteurs">
+    </div>
+    </div> 
+    <br>
+
+    <div class="home"onclick=window.location.href="/"><p>Back to Home page</p></div>
+    </form>
+   </div>
+ 
+</body>
+</div> 
+</html>
